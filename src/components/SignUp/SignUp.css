@@ -1,0 +1,8 @@
+input#colFormLabel.form-control.signup-input{
+	border-style: none;
+}
+.property-image{	
+  background-color: #cccccc;
+  filter: blur(2px);
+  -webkit-filter: blur(2px); 
+}

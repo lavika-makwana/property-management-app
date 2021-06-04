@@ -1,13 +1,26 @@
 import './App.css';
-// import { Glyphicon } from 'react-bootstrap'; 
+import { Route, Switch} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Header from './components/Header/Header';
 import SignUp from './components/SignUp/SignUp';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/SignUp/Login';
+import Error from './components/Error';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+    	<Switch>
+    		<Route path='/'>
+    			<Header />
+    		</Route>
+    		<Route path='/login'>
+    			<Login />
+    		</Route>
+    		<Route path='/signup'>
+    			<SignUp />
+    		</Route>
+    		<Route component={Error} />
+    	</Switch>
       <SignUp/>
     </div>
   );
