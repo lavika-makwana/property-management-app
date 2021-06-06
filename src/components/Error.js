@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = () => {
 	return(
-		<div>PAGE NOT FOUND</div>
+		<div>404!! PAGE NOT FOUND</div>
 	);
 };
 
