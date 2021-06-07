@@ -12,18 +12,18 @@ import Footer from './components/SuperAdmin/Footer';
 function App() {
   return (
     <div className="App">
-    	{/*<Switch>
+    	<Switch>
     		<Route path='/' exact='true'>
     			<MainHeader />
     		</Route>
     		<Route path='/login' component={Login}/>
     		<Route path='/signup' component={SignUp}/>
     		<Route component={Error} />
-    	</Switch> */}
-      <Header />
+    	</Switch>
+      {/*<Header />
       <Menu />
       <Dashboard />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

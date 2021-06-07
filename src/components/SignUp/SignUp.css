@@ -6,3 +6,6 @@ input#colFormLabel.form-control.signup-input{
   filter: blur(2px);
   -webkit-filter: blur(2px); 
 }
+.singup-div{
+	top: 150px;
+}
