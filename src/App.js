@@ -17,7 +17,7 @@ function App() {
     		<Route path='/signup' component={SignUp}/>
     		<Route component={Error} />
     	</Switch>
-      
+      <SuperAdmin/>
     </div>
   );
 }
