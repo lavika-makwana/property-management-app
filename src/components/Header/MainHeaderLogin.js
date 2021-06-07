@@ -1,6 +1,6 @@
-import './HeaderLogin.css';
+import './MainHeader.css';
 import { Link } from  'react-router-dom';
-const HeaderLogin = () => {
+const MainHeaderLogin = () => {
 	return(
 		<nav className="navbar navbar-inverse">
 		  <div className="container-fluid">
@@ -16,4 +16,4 @@ const HeaderLogin = () => {
 	);
 };
 
-export default HeaderLogin;
+export default MainHeaderLogin;

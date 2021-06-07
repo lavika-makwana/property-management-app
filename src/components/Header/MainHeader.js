@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import HeaderLogin from './HeaderLogin';
+import MainHeaderLogin from './MainHeaderLogin';
 
-const Header = () => {
+const MainHeader = () => {
 	return(
 		<>
 			<header className=''>
-				<HeaderLogin/>
+				<MainHeaderLogin/>
 			</ header>
 			<div className=''>
 				
@@ -14,4 +14,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default MainHeader;
