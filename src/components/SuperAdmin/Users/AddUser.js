@@ -4,7 +4,7 @@ import { addUser } from '../../../actions/';
 import cuid from 'cuid';
 
 const AddUser = (props) => {
-	const [userAdd, addUserDetails] = useState({
+	const [userAdd, setUserDetails] = useState({
     userName: '',
     userContact: '',
     userPassword: '',
@@ -14,21 +14,16 @@ const AddUser = (props) => {
 
 	const dispatch = useDispatch();
 
-	const handleChange = (e) => {
+	const changeHandler = e => {
 		const name = e.target.name;
     const value = e.target.value;
-    console.log(value);
-   	console.log(userAdd);
-
-    addUserDetails({...userAdd, [name]: value});
-	};
+	  setUserDetails({...userAdd, [e.target.name]: e.target.value})
+	}
 
 	const handleSubmit = (e) => {
-		e.preventDefault();
-		addUserDetails(dispatch(addUser({user: userAdd, id: cuid()})));
-		console.log(addUserDetails);
-	};
-
+	    e.preventDefault();
+	    setUserDetails(dispatch(addUser({user: userAdd, id: cuid()})))
+  	};
 	return(
 		<div className="card card-info">
 	    <div className="card-header">
@@ -46,7 +41,7 @@ const AddUser = (props) => {
 		            name='userName'
 		            value={userAdd.userName}
 		            className='form-control' 
-		            onChange={handleChange}
+		            onChange={changeHandler}
 		            id='input' 
 		            placeholder='Name'
 		          />
@@ -60,7 +55,7 @@ const AddUser = (props) => {
 	            	name='userContact'
 	            	value={userAdd.userContact} 
 	            	className='form-control' 
-	            	onChange={handleChange}
+	            	onChange={changeHandler}
 	            	id='inputContact' 
 	            	placeholder='Contact' 
 	            />
@@ -74,7 +69,7 @@ const AddUser = (props) => {
 	            	name='userEmail' 
 	            	value={userAdd.userEmail}
 	            	className='form-control' 
-	            	onChange={handleChange}
+	            	onChange={changeHandler}
 	            	id='inputEmail' 
 	            	placeholder='Email' 
 	            />
@@ -88,7 +83,7 @@ const AddUser = (props) => {
 	            	name='userPassword'
 	            	value={userAdd.userPassword}
 	            	className='form-control' 
-	            	onChange={handleChange}
+	            	onChange={changeHandler}
 	            	id='inputPassword3' placeholder='Password' />
 	          </div>
 	        </div>
