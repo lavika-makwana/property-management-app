@@ -42,10 +42,10 @@ const SignUp = (props) => {
                 <div className="col-sm-10">
                   <input 
                     type="name" 
+                    name='user_name' 
                     className="form-control signup-input" 
                     value={userSignUp.user_name}
                     onChange={handleInput}
-                    name='user_name' 
                     id="signup_name" 
                     placeholder=""/>
                 </div>
@@ -55,10 +55,10 @@ const SignUp = (props) => {
                 <div className="col-sm-10">
                   <input 
                     type="contact" 
+                    name='contact' 
                     className="form-control signup-input" 
                     value={userSignUp.contact}
                     onChange={handleInput}
-                    name='contact' 
                     id="signup_contact" 
                     placeholder=""/>
                 </div>
@@ -68,10 +68,10 @@ const SignUp = (props) => {
                 <div className="col-sm-10">
                   <input
                     type="password"
+                    name='password' 
                     className="form-control signup-input" 
                     value={userSignUp.password}
                     onChange={handleInput}
-                    name='password' 
                     id="signup_password" 
                     placeholder=""/>
                 </div>
@@ -81,10 +81,10 @@ const SignUp = (props) => {
                 <div className="col-sm-10">
                   <input 
                     type="email" 
+                    name='email' 
                     className="form-control signup-input" 
                     value={userSignUp.email}
                     onChange={handleInput}
-                    name='email' 
                     id="signup_email"emaillaceholder=""/>
                 </div>
               </div>

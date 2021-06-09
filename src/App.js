@@ -4,10 +4,8 @@ import MainHeader from './components/Header/MainHeader';
 import SignUp from './components/SignUp/SignUp';
 import Login from './components/SignUp/Login';
 import Error from './components/Error';
-import Header from './components/SuperAdmin/Header';
-import Dashboard from './components/SuperAdmin/Content';
-import Menu from './components/SuperAdmin/Menu';
-import Footer from './components/SuperAdmin/Footer';
+import SuperAdmin from './components/SuperAdmin/SuperAdmin';
+import UserNav from './components/SuperAdmin/Users/NavBar';
 
 function App() {
   return (
@@ -16,14 +14,12 @@ function App() {
     		<Route path='/' exact='true'>
     			<MainHeader />
     		</Route>
+        <Route path= '/superadmin' component={SuperAdmin}/>
+        <Route path='/users' component={UserNav}/>
     		<Route path='/login' component={Login}/>
     		<Route path='/signup' component={SignUp}/>
-    		<Route component={Error} />
+    		<Route component={Error} /> 
     	</Switch>
-      {/*<Header />
-      <Menu />
-      <Dashboard />
-      <Footer /> */}
     </div>
   );
 }
